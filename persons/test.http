@@ -1,0 +1,12 @@
+###
+
+POST http://localhost:8080/v1/persons/create HTTP/1.1
+content-type: application/json
+
+{
+  "id_card": "xxx",
+  "first_name": "Denis",
+  "last_name": "Korchuganov"
+}
+
+###

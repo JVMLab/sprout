@@ -1,0 +1,13 @@
+spring:
+  main:
+    banner-mode: "off"
+    keep-alive: true
+  threads:
+    virtual:
+      enabled: true
+server:
+  jetty:
+    accesslog:
+      enabled: true
+    threads:
+      acceptors: 5
