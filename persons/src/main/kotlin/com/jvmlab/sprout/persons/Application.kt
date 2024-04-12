@@ -2,14 +2,11 @@ package com.jvmlab.sprout.persons
 
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication
-import org.springframework.boot.Banner
 
 
 @SpringBootApplication
 class Application
 
 fun main(args: Array<String>) {
-	runApplication<Application>(*args) {
-        setBannerMode(Banner.Mode.OFF)
-    }
+	runApplication<Application>(*args)
 }
