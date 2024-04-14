@@ -11,7 +11,7 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer
 
 
 @Configuration
-class WebConfig : WebMvcConfigurer {
+class WebConfig(@Autowired val idempotencyInterceptor: IdempotencyInterceptor) : WebMvcConfigurer {
   private val logger = LoggerFactory.getLogger(this.javaClass)
 
   init {
@@ -20,6 +20,6 @@ class WebConfig : WebMvcConfigurer {
 
   override fun addInterceptors(registry: InterceptorRegistry) {
     super.addInterceptors(registry)
-    registry.addInterceptor(IdempotencyInterceptor());
+    registry.addInterceptor(idempotencyInterceptor);
   }
 }
